@@ -1,4 +1,6 @@
 import {Grafico} from "./Experiencia.js";
+import {Footer} from "./VarCualitativa.js";
+
 const ValueSector = () => {
     
     let resultado = document.getElementById("empezar").value;
@@ -274,26 +276,26 @@ const Indentificar = () =>{
         console.log(  `Rendimiento sobre Capital ROE    |    23    |    ${f1}  ` );
         console.log(  `Periodo de cobro a Deudores      |    23    |    ${f2}  ` );
         console.log(  `Razón de efectivo a activo total |    23    |    ${f3}  ` ); 
-        console.log(  `Razón de cobertura de interés    |    23    |    ${f4}  ` ); break;
+        console.log(  `Razón de cobertura de interés    |    23    |    ${f4}  ` ); Footer();  break;
 
-        case "E": console.log("    Indicador   |   Valor   |    Puntos    ");
+        case "E": Grafico("E");console.log("    Indicador   |   Valor   |    Puntos    ");
         console.log(  `RRazón de cobertura de interés   |    23    |    ${f4}  ` );
         console.log(  `Razón del efectivo               |    23    |    ${f5}  ` );
         console.log(  `Razón de uso de activos fijos    |    23    |    ${f6}  ` ); break;
             
-        case "M": console.log("    Indicador   |   Valor   |    Puntos    "); 
+        case "M": Grafico("M");console.log("    Indicador   |   Valor   |    Puntos    "); 
         console.log(  `Periodo de cobro a deudores                    |    23    |    ${f2}  ` );
         console.log(  `Razón de efectivo a activo total               |    23    |    ${f3}  ` );
         console.log(  `Razón de ventas a capital operativo empleado   |    23    |    ${f7}  ` );
         console.log(  `Razón de costo de financiamiento a ventas      |    23    |    ${f8}  ` ); break;
 
-        case "C": console.log("    Indicador   |   Valor   |    Puntos    ");
+        case "C": Grafico("C");console.log("    Indicador   |   Valor   |    Puntos    ");
         console.log(  `Razón de efectivo a activo total          |    23    |    ${f3}  ` );
         console.log(  `Razón de costo de financiamiento a ventas |    23    |    ${f8}  ` );
         console.log(  `Rotación de activos totales               |    23    |    ${f9}  ` );
         console.log(  `Periodo de pago a acreedores              |    23    |    ${f10}  ` ); break;
 
-        case "S": console.log("    Indicador   |   Valor   |    Puntos    ");
+        case "S": Grafico("S");console.log("    Indicador   |   Valor   |    Puntos    ");
         console.log(  `Razón del efectivo                   |    23    |    ${f5}  ` );
         console.log(  `Razón de capital de trabajo a ventas |    23    |    ${f11}  ` );
         console.log(  `Margen bruto de utilidad             |    23    |    ${f12}  ` ); break;
