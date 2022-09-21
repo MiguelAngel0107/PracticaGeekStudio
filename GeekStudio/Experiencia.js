@@ -130,8 +130,58 @@ const I2 = (x, result) =>{
 
     return reult;
 };
-const I3 = () =>{
-    
+const I3 = (x, result) =>{
+    let reult;
+    if(result=="A")
+    {
+        if(x=="ND")
+        {
+            reult=63;
+        }else{
+            if(x==0){reult =86;}
+            if(x==1){reult =39;}
+            if(x==2){reult =(-50);}
+            if(x>=3){reult =(-100);}
+        }; 
+    };
+    if(result=="E")
+    {
+        if(x=="ND")
+        {
+            reult=90;
+        }else{
+            if(x==0){reult =121;}
+            if(x==1){reult =58;}
+            if(x==2){reult =(12);}
+            if(x>=3){reult =(-57);}
+        }; 
+    };
+    if(result=="M")
+    {
+        if(x=="ND")
+        {
+            reult=86;
+        }else{
+            if(x==0){reult =86;}
+            if(x==1){reult =53;}
+            if(x==2){reult =(22);}
+            if(x>=3){reult =(-28);}
+        }; 
+    };
+    if(result=="C")
+    {
+        if(x=="ND")
+        {
+            reult=69;
+        }else{
+            if(x==0){reult =98;}
+            if(x==1){reult =39;}
+            if(x==2){reult =(11);}
+            if(x>=3){reult =(-43);}
+        }; 
+    };
+
+    return reult;    
 };
 const I4 = () =>{
     
