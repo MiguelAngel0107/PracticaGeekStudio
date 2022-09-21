@@ -209,6 +209,55 @@ const I4 = (x, result) =>{
             if((T*0.98)<x){reult =79;}
         }; 
     };
+    if(result=="E")
+    {
+        if(x=="ND")
+        {
+            reult=94;
+        }else{
+            if((0)<x&&x>=(T*0.5)){reult =66;}
+            if((T*0.5)<x&&x>=(T*0.71)){reult =73;}
+            if((T*0.71)<x&&x>=(T*0.95)){reult =81;}
+            if((T*0.95)<x&&x>T){reult =86;}
+            if(T==x){reult =102;}
+        }; 
+    };
+    if(result=="M")
+    {
+        if(x=="ND")
+        {
+            reult=77;
+        }else{
+            if((0)<x&&x>=(T*0.67)){reult =53;}
+            if((T*0.67)<x&&x>=(T*0.82)){reult =66;}
+            if((T*0.82)<x&&x>=(T*0.96)){reult =68;}
+            if((T*0.96)<x){reult =85;}
+        }; 
+    };
+    if(result=="C")
+    {
+        if(x=="ND")
+        {
+            reult=78;
+        }else{
+            if((0)<x&&x>=(T*0.56)){reult =33;}
+            if((T*0.56)<x&&x>=(T*0.93)){reult =54;}
+            if((T*0.93)<x&&x>T){reult =64;}
+            if(T==x){reult =92;}
+        }; 
+    };
+    if(result=="S")
+    {
+        if(x=="ND")
+        {
+            reult=98;
+        }else{
+            if((0)<x&&x>=(T*0.65)){reult =55;}
+            if((T*0.65)<x&&x>=(T*0.87)){reult =78;}
+            if((T*0.87)<x&&x>(T)){reult =88;}
+            if(T==x){reult =107;}
+        }; 
+    };
 
 
 
