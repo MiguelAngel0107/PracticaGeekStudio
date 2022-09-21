@@ -180,11 +180,39 @@ const I3 = (x, result) =>{
             if(x>=3){reult =(-43);}
         }; 
     };
-
+    if(result=="C")
+    {
+        if(x=="ND")
+        {
+            reult=94;
+        }else{
+            if(x==0){reult =115;}
+            if(x==1){reult =73;}
+            if(x==2){reult =(24);}
+            if(x>=3){reult =(-11);}
+        }; 
+    };
     return reult;    
 };
-const I4 = () =>{
-    
+const I4 = (x, result) =>{
+
+    let reult;
+    if(result=="A")
+    {
+        if(x=="ND")
+        {
+            reult=73;
+        }else{
+            if((0)<x&&x>=(T*0.47)){reult =51;}
+            if((T*0.47)<x&&x>=(T*0.68)){reult =58;}
+            if((T*0.68)<x&&x>=(T*0.98)){reult =66;}
+            if((T*0.98)<x){reult =79;}
+        }; 
+    };
+
+
+
+    return reult;
 };
 
 const Valor = 0;
@@ -196,8 +224,8 @@ export const Grafico = (x)=> {
         case "A": console.log("    Indicadores           |   Valor   |    Puntos    ");
         console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses   |    23    |    ${I1(Valor, x)}  `);
         console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses   |    23    |    ${I2(Valor, x)}  `);
-        console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación        |    23    |      `);
-        console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación           |    23    |      `); break;
+        console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación        |    23    |   ${I3(Valor, x)}   `);
+        console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación           |    23    |   ${I4(Valor, x)}   `); break;
         case "E":
 
         case "M":
