@@ -1,6 +1,6 @@
 const T =500;
 const I1 = (x, result) =>{
-    let reult;
+    let reult=0;
 
     if(result=="A")
     {
@@ -70,7 +70,7 @@ const I1 = (x, result) =>{
     return reult;
 };
 const I2 = (x, result) =>{
-    let reult;
+    let reult=0;
     if(result=="A")
     {
         if(x=="ND")
@@ -131,7 +131,7 @@ const I2 = (x, result) =>{
     return reult;
 };
 const I3 = (x, result) =>{
-    let reult;
+    let reult=0;
     if(result=="A")
     {
         if(x=="ND")
@@ -196,7 +196,7 @@ const I3 = (x, result) =>{
 };
 const I4 = (x, result) =>{
 
-    let reult;
+    let reult=0;
     if(result=="A")
     {
         if(x=="ND")
@@ -264,38 +264,42 @@ const I4 = (x, result) =>{
     return reult;
 };
 
-const Valor = 0;
+const ValorAsignado = 0;
 
 export const Grafico = (x)=> {
 
     switch(x)
     {
         case "A": console.log("    Indicadores           |   Valor   |    Puntos    ");
-        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses   |    23    |    ${I1(Valor, x)}  `);
-        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses   |    23    |    ${I2(Valor, x)}  `);
-        console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación        |    23    |   ${I3(Valor, x)}   `);
-        console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación           |    23    |   ${I4(Valor, x)}   `); break;
+        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses          |    23    |    ${I1(ValorAsignado, x)}  `);
+        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses          |    23    |    ${I2(ValorAsignado, x)}  `);
+        console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación               |    23    |   ${I3(ValorAsignado, x)}   `);
+        console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación                  |    23    |   ${I4(ValorAsignado, x)}   `); break;
         case "E":console.log("    Indicadores           |   Valor   |    Puntos    ");
-        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses   |    23    |    ${I1(Valor, x)}  `);
-        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses   |    23    |    ${I2(Valor, x)}  `);
-        console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación        |    23    |   ${I3(Valor, x)}   `);
-        console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación           |    23    |   ${I4(Valor, x)}   `); break;
+        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses          |    23    |    ${I1(ValorAsignado, x)}  `);
+        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses          |    23    |    ${I2(ValorAsignado, x)}  `);
+        console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación               |    23    |   ${I3(ValorAsignado, x)}   `);
+        console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación                  |    23    |   ${I4(ValorAsignado, x)}   `); break;
         case "M":console.log("    Indicadores           |   Valor   |    Puntos    ");
-        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses   |    23    |    ${I1(Valor, x)}  `);
-        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses   |    23    |    ${I2(Valor, x)}  `);
-        console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación        |    23    |   ${I3(Valor, x)}   `);
-        console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación           |    23    |   ${I4(Valor, x)}   `); break;
+        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses          |    23    |    ${I1(ValorAsignado, x)}  `);
+        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses          |    23    |    ${I2(ValorAsignado, x)}  `);
+        console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación               |    23    |   ${I3(ValorAsignado, x)}   `);
+        console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación                  |    23    |   ${I4(ValorAsignado, x)}   `); break;
         case "C":console.log("    Indicadores           |   Valor   |    Puntos    ");
-        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses   |    23    |    ${I1(Valor, x)}  `);
-        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses   |    23    |    ${I2(Valor, x)}  `);
-        console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación        |    23    |   ${I3(Valor, x)}   `);
-        console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación           |    23    |   ${I4(Valor, x)}   `); break;
+        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses          |    23    |    ${I1(ValorAsignado, x)}  `);
+        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses          |    23    |    ${I2(ValorAsignado, x)}  `);
+        console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación               |    23    |   ${I3(ValorAsignado, x)}   `);
+        console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación                  |    23    |   ${I4(ValorAsignado, x)}   `); break;
         case "S":console.log("    Indicadores           |   Valor   |    Puntos    ");
-        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses   |    23    |    ${I1(Valor, x)}  `);
-        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses   |    23    |    ${I2(Valor, x)}  `);
-        console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación        |    23    |   ${I3(Valor, x)}   `);
-        console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación           |    23    |   ${I4(Valor, x)}   `); break;
+        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses          |    23    |    ${I1(ValorAsignado, x)}  `);
+        console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses          |    23    |    ${I2(ValorAsignado, x)}  `);
+        console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación               |    23    |   ${I3(ValorAsignado, x)}   `);
+        console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación                  |    23    |   ${I4(ValorAsignado, x)}   `); break;
 
     }
 
 }
+export const ValorTotal=()=>{
+
+
+};

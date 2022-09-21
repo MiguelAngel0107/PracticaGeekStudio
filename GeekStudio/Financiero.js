@@ -17,7 +17,7 @@ boton.addEventListener("click", () => {
 })
 
 const F1 =(x)=>{
-    let reult;
+    let reult=0;
     if( x =="Negativo"||x =="negativos"){
         reult = 52;
     }else if(x=="ND"||x=="Sin Informacion"){
@@ -32,7 +32,7 @@ const F1 =(x)=>{
     return reult;
 };
 const F2 =(x)=>{
-    let reult;
+    let reult=0;
     if(result=="A")
     {
         if(x=="ND")
@@ -59,7 +59,7 @@ const F2 =(x)=>{
     return reult;
 };
 const F3 =(x)=>{
-    let reult;
+    let reult=0;
     if(result=="M")
     {
         if(x=="ND")
@@ -97,7 +97,7 @@ const F3 =(x)=>{
     return reult;
 };
 const F4 =(x)=>{
-    let reult;
+    let reult=0;
     if(result=="A")
     {
         if(x=="ND")
@@ -127,7 +127,7 @@ const F4 =(x)=>{
     return reult;
 };
 const F5 =(x)=>{
-    let reult;
+    let reult=0;
     if(result=="E")
     {
         if(x=="ND")
@@ -155,7 +155,7 @@ const F5 =(x)=>{
     return reult;
 };
 const F6 =(x)=>{
-    let reult;
+    let reult=0;
     if(x=="ND")
     {
         reult=85;
@@ -167,7 +167,7 @@ const F6 =(x)=>{
     return reult;
 };
 const F7 =(x)=>{
-    let reult;
+    let reult=0;
     if(x=="ND")
         {
             reult=75;
@@ -181,7 +181,7 @@ const F7 =(x)=>{
     return reult;
 };
 const F8 =(x)=>{
-    let reult;
+    let reult=0;
     if(result=="M")
     {
         if(x=="ND")
@@ -210,7 +210,7 @@ const F8 =(x)=>{
     return reult;
 };
 const F9 =(x)=>{
-    let reult;
+    let reult=0;
     if(x=="ND")
         {
             reult=54;
@@ -224,7 +224,7 @@ const F9 =(x)=>{
     return reult;
 };
 const F10 =(x)=>{
-    let reult;
+    let reult=0;
     if(x=="ND")
         {
             reult=76;
@@ -238,7 +238,7 @@ const F10 =(x)=>{
     return reult;
 };
 const F11=(x)=>{
-    let reult;
+    let reult=0;
     if(x=="ND")
         {
             reult=79;
@@ -252,7 +252,7 @@ const F11=(x)=>{
     return reult;
 };
 const F12 =(x)=>{
-    let reult;
+    let reult=0;
     if(x=="ND")
         {
             reult=50;
@@ -265,8 +265,10 @@ const F12 =(x)=>{
     return reult;
 };
 
+
 const f1 = F1(34); const f2 = F2(60); const f3 = F3(); const f4 = F4(); const f5 = F5(); const f6 = F6();
 const f7 = F7(); const f8 = F8(); const f9 = F9(); const f10 = F10(); const f11 = F11(); const f12 = F12();
+
 
 const Indentificar = () =>{
 
@@ -304,6 +306,11 @@ const Indentificar = () =>{
     }; 
 
 };
+
+const TotalCuantitativo=()=>{
+    let Total=0;
+    Total = f1+f2+f3+f4+f5+f6+f7+f8+f9+f10+f11+f12;
+}
 
 
 
