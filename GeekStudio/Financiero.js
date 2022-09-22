@@ -301,16 +301,15 @@ function CL4(){let I; I=document.getElementById("CL4").value; return I;};
 function CL5(){let I; I=document.getElementById("CL5").value; return I;};
 function CL6(){let I; I=document.getElementById("CL6").value; return I;};
 
-const f1 = F1(B1()); const f2 = F2(B2(),aux()); 
-const f3 = F3(B3(),aux()); 
-const f4 = F4(B4(),aux()); 
-const f5 = F5(B5(),aux()); const f6 = F6(B6());
-const f7 = F7(B7()); const f8 = F8(B8(),aux()); 
-const f9 = F9(B9()); const f10 = F10(B10()); const f11 = F11(B11()); const f12 = F12(B12());
-
-
-
 const Indentificar = () =>{
+
+    let f1 = F1(B1()); let f2 = F2(B2(),aux()); 
+    let f3 = F3(B3(),aux()); 
+    let f4 = F4(B4(),aux()); 
+    let f5 = F5(B5(),aux()); let f6 = F6(B6());
+    let f7 = F7(B7()); let f8 = F8(B8(),aux()); 
+    let f9 = F9(B9()); let f10 = F10(B10()); let f11 = F11(B11()); let f12 = F12(B12());
+
 
     switch (ValueSector(document.getElementById("empezar").value)){
 
@@ -321,7 +320,7 @@ const Indentificar = () =>{
         console.log(  `Razón de efectivo a activo total |    ${B3()}    |    ${f3}  ` ); 
         console.log(  `Razón de cobertura de interés    |    ${B4()}    |    ${f4}  ` ); 
         let cuali_A=Footer(CL1(),CL2(),CL3(),CL4(),CL5(),CL6());
-        Resultados(V1+TotalCuantitativo("A"), cuali_A); break;
+        Resultados(V1+TotalCuantitativo("A",f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12), cuali_A); break;
 
         case "E": let V2=Grafico("E",A1(),A2(),A3(),A4());
         console.log("    Indicador   |   Valor   |    Puntos    ");
@@ -329,7 +328,7 @@ const Indentificar = () =>{
         console.log(  `Razón del efectivo               |    ${B5()}    |    ${f5}  ` );
         console.log(  `Razón de uso de activos fijos    |    ${B6()}    |    ${f6}  ` ); 
         let cuali_E=Footer(CL1(),CL2(),CL3(),CL4(),CL5(),CL6());
-        Resultados(V2+TotalCuantitativo("E"), cuali_E);break;
+        Resultados(V2+TotalCuantitativo("E",f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12), cuali_E);break;
             
         case "M": let V3=Grafico("M",A1(),A2(),A3(),A4());
         console.log("    Indicador   |   Valor   |    Puntos    "); 
@@ -338,7 +337,7 @@ const Indentificar = () =>{
         console.log(  `Razón de ventas a capital operativo empleado   |    ${B7()}    |    ${f7}  ` );
         console.log(  `Razón de costo de financiamiento a ventas      |    ${B8()}    |    ${f8}  ` ); 
         let cuali_M=Footer(CL1(),CL2(),CL3(),CL4(),CL5(),CL6());
-        Resultados(V3+TotalCuantitativo("M"), cuali_M);break;
+        Resultados(V3+TotalCuantitativo("M",f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12), cuali_M);break;
 
         case "C": let V4=Grafico("C",A1(),A2(),A3(),A4());console.log("    Indicador   |   Valor   |    Puntos    ");
         console.log(  `Razón de efectivo a activo total          |    ${B3()}    |    ${f3}  ` );
@@ -346,7 +345,7 @@ const Indentificar = () =>{
         console.log(  `Rotación de activos totales               |    ${B9()}    |    ${f9}  ` );
         console.log(  `Periodo de pago a acreedores              |    ${B10()}    |    ${f10}  ` ); 
         let cuali_C=Footer(CL1(),CL2(),CL3(),CL4(),CL5(),CL6());
-        Resultados(V4+TotalCuantitativo("C"), cuali_C);break;
+        Resultados(V4+TotalCuantitativo("C",f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12), cuali_C);break;
 
         case "S": let V5 = Grafico("S",A1(),A2(),A3(),A4());
         console.log("    Indicador   |   Valor   |    Puntos    ");
@@ -354,13 +353,13 @@ const Indentificar = () =>{
         console.log(  `Razón de capital de trabajo a ventas |    ${B11()}    |    ${f11}  ` );
         console.log(  `Margen bruto de utilidad             |    ${B12()}    |    ${f12}  ` );
         let cuali_S=Footer(CL1(),CL2(),CL3(),CL4(),CL5(),CL6());
-        Resultados(V5+TotalCuantitativo("S"), cuali_S); break;
+        Resultados(V5+TotalCuantitativo("S",f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12), cuali_S); break;
     }; 
 
 };
 
 
-const TotalCuantitativo=(x)=>{
+const TotalCuantitativo=(x,f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12)=>{
     let Total=0;
     if(x=="A"){Total = f1+f2+f3+f4;};
     if(x=="E"){Total = f4+f5+f6;};
