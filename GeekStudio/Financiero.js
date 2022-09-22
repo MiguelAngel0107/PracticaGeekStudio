@@ -269,29 +269,30 @@ const F12 =(x)=>{
 const f1 = F1(34); const f2 = F2(60); const f3 = F3(); const f4 = F4(); const f5 = F5(); const f6 = F6();
 const f7 = F7(); const f8 = F8(); const f9 = F9(); const f10 = F10(); const f11 = F11(); const f12 = F12();
 
+const Val_1=0;const Val_2=0;const Val_3=0;const Val_4=0;const Val_5=0;
 
 const Indentificar = () =>{
 
     switch (ValueSector()){
 
-        case "A": Grafico("A"); console.log("    Indicador   |   Valor   |    Puntos    ");
+        case "A": Val_1=Grafico("A"); console.log("    Indicador   |   Valor   |    Puntos    ");
         console.log(  `Rendimiento sobre Capital ROE    |    23    |    ${f1}  ` );
         console.log(  `Periodo de cobro a Deudores      |    23    |    ${f2}  ` );
         console.log(  `Razón de efectivo a activo total |    23    |    ${f3}  ` ); 
         console.log(  `Razón de cobertura de interés    |    23    |    ${f4}  ` ); Footer();  break;
 
-        case "E": Grafico("E");console.log("    Indicador   |   Valor   |    Puntos    ");
+        case "E": Val_2=Grafico("E");console.log("    Indicador   |   Valor   |    Puntos    ");
         console.log(  `RRazón de cobertura de interés   |    23    |    ${f4}  ` );
         console.log(  `Razón del efectivo               |    23    |    ${f5}  ` );
         console.log(  `Razón de uso de activos fijos    |    23    |    ${f6}  ` ); break;
             
-        case "M": Grafico("M");console.log("    Indicador   |   Valor   |    Puntos    "); 
+        case "M": Val_3=Grafico("M");console.log("    Indicador   |   Valor   |    Puntos    "); 
         console.log(  `Periodo de cobro a deudores                    |    23    |    ${f2}  ` );
         console.log(  `Razón de efectivo a activo total               |    23    |    ${f3}  ` );
         console.log(  `Razón de ventas a capital operativo empleado   |    23    |    ${f7}  ` );
         console.log(  `Razón de costo de financiamiento a ventas      |    23    |    ${f8}  ` ); break;
 
-        case "C": Grafico("C");console.log("    Indicador   |   Valor   |    Puntos    ");
+        case "C": Val_4=Grafico("C");console.log("    Indicador   |   Valor   |    Puntos    ");
         console.log(  `Razón de efectivo a activo total          |    23    |    ${f3}  ` );
         console.log(  `Razón de costo de financiamiento a ventas |    23    |    ${f8}  ` );
         console.log(  `Rotación de activos totales               |    23    |    ${f9}  ` );
@@ -300,7 +301,7 @@ const Indentificar = () =>{
         case "S": Grafico("S");console.log("    Indicador   |   Valor   |    Puntos    ");
         console.log(  `Razón del efectivo                   |    23    |    ${f5}  ` );
         console.log(  `Razón de capital de trabajo a ventas |    23    |    ${f11}  ` );
-        console.log(  `Margen bruto de utilidad             |    23    |    ${f12}  ` ); break;
+        console.log(  `Margen bruto de utilidad             |    23    |    ${f12}  ` );Footer(Grafico("S")); break;
 
         default : alert("Valor no encontrado");
     }; 

@@ -1,5 +1,5 @@
 
 
-export const Footer=()=> {
-    alert("Hola")
+export const Footer=(x)=> {
+    alert(x);
 };
