@@ -278,14 +278,23 @@ const VP = 50;
 
 const aux="M";
 
-
-const f1 = F1(VP); const f2 = F2(VP,aux); const f3 = F3(VP,aux); const f4 = F4(VP,aux); const f5 = F5(VP,aux); const f6 = F6(VP);
-const f7 = F7(VP); const f8 = F8(VP,aux); const f9 = F9(VP); const f10 = F10(VP); const f11 = F11(VP); const f12 = F12(VP);
-
 function A1(){let I; I=document.getElementById("A1").value; return I;};
 function A2(){let I; I=document.getElementById("A2").value; return I;};
 function A3(){let I; I=document.getElementById("A3").value; return I;};
 function A4(){let I; I=document.getElementById("A4").value; return I;};
+
+function B1(){let I; I=document.getElementById("B1").value; return I;};
+function B2(){let I; I=document.getElementById("B2").value; return I;};
+function B3(){let I; I=document.getElementById("B3").value; return I;};
+function B4(){let I; I=document.getElementById("B4").value; return I;};
+function B5(){let I; I=document.getElementById("B5").value; return I;};
+function B6(){let I; I=document.getElementById("B6").value; return I;};
+function B7(){let I; I=document.getElementById("B7").value; return I;};
+function B8(){let I; I=document.getElementById("B8").value; return I;};
+function B9(){let I; I=document.getElementById("B9").value; return I;};
+function B10(){let I; I=document.getElementById("B10").value; return I;};
+function B11(){let I; I=document.getElementById("B11").value; return I;};
+function B12(){let I; I=document.getElementById("B12").value; return I;};
 
 function CL1(){let I; I=document.getElementById("CL1").value; return I;};
 function CL2(){let I; I=document.getElementById("CL2").value; return I;};
@@ -294,7 +303,8 @@ function CL4(){let I; I=document.getElementById("CL4").value; return I;};
 function CL5(){let I; I=document.getElementById("CL5").value; return I;};
 function CL6(){let I; I=document.getElementById("CL6").value; return I;};
 
-
+const f1 = F1(B1()); const f2 = F2(B2(),aux); const f3 = F3(B3(),aux); const f4 = F4(B4(),aux); const f5 = F5(B5(),aux); const f6 = F6(B6());
+const f7 = F7(B7()); const f8 = F8(B8(),aux); const f9 = F9(B9()); const f10 = F10(B10()); const f11 = F11(B11()); const f12 = F12(B12());
 
 
 
@@ -304,43 +314,43 @@ const Indentificar = () =>{
 
         case "A": let V1=Grafico("A",A1(),A2(),A3(),A4()); 
         console.log("    Indicador   |   Valor   |    Puntos    ");
-        console.log(  `Rendimiento sobre Capital ROE    |    ${VP}    |    ${f1}  ` );
-        console.log(  `Periodo de cobro a Deudores      |    ${VP}    |    ${f2}  ` );
-        console.log(  `Razón de efectivo a activo total |    ${VP}    |    ${f3}  ` ); 
-        console.log(  `Razón de cobertura de interés    |    ${VP}    |    ${f4}  ` ); 
+        console.log(  `Rendimiento sobre Capital ROE    |    ${B1()}    |    ${f1}  ` );
+        console.log(  `Periodo de cobro a Deudores      |    ${B2()}    |    ${f2}  ` );
+        console.log(  `Razón de efectivo a activo total |    ${B3()}    |    ${f3}  ` ); 
+        console.log(  `Razón de cobertura de interés    |    ${B4()}    |    ${f4}  ` ); 
         let cuali_A=Footer(CL1(),CL2(),CL3(),CL4(),CL5(),CL6());
         Resultados(V1+TotalCuantitativo("A"), cuali_A); break;
 
         case "E": let V2=Grafico("E",A1(),A2(),A3(),A4());
         console.log("    Indicador   |   Valor   |    Puntos    ");
-        console.log(  `RRazón de cobertura de interés   |    ${VP}    |    ${f4}  ` );
-        console.log(  `Razón del efectivo               |    ${VP}    |    ${f5}  ` );
-        console.log(  `Razón de uso de activos fijos    |    ${VP}    |    ${f6}  ` ); 
+        console.log(  `RRazón de cobertura de interés   |    ${B4()}    |    ${f4}  ` );
+        console.log(  `Razón del efectivo               |    ${B5()}    |    ${f5}  ` );
+        console.log(  `Razón de uso de activos fijos    |    ${B6()}    |    ${f6}  ` ); 
         let cuali_E=Footer(CL1(),CL2(),CL3(),CL4(),CL5(),CL6());
         Resultados(V2+TotalCuantitativo("E"), cuali_E);break;
             
         case "M": let V3=Grafico("M",A1(),A2(),A3(),A4());
         console.log("    Indicador   |   Valor   |    Puntos    "); 
-        console.log(  `Periodo de cobro a deudores                    |    ${VP}    |    ${f2}  ` );
-        console.log(  `Razón de efectivo a activo total               |    ${VP}    |    ${f3}  ` );
-        console.log(  `Razón de ventas a capital operativo empleado   |    ${VP}    |    ${f7}  ` );
-        console.log(  `Razón de costo de financiamiento a ventas      |    ${VP}    |    ${f8}  ` ); 
+        console.log(  `Periodo de cobro a deudores                    |    ${B2()}    |    ${f2}  ` );
+        console.log(  `Razón de efectivo a activo total               |    ${B3()}    |    ${f3}  ` );
+        console.log(  `Razón de ventas a capital operativo empleado   |    ${B7()}    |    ${f7}  ` );
+        console.log(  `Razón de costo de financiamiento a ventas      |    ${B8()}    |    ${f8}  ` ); 
         let cuali_M=Footer(CL1(),CL2(),CL3(),CL4(),CL5(),CL6());
         Resultados(V3+TotalCuantitativo("M"), cuali_M);break;
 
         case "C": let V4=Grafico("C",A1(),A2(),A3(),A4());console.log("    Indicador   |   Valor   |    Puntos    ");
-        console.log(  `Razón de efectivo a activo total          |    ${VP}    |    ${f3}  ` );
-        console.log(  `Razón de costo de financiamiento a ventas |    ${VP}    |    ${f8}  ` );
-        console.log(  `Rotación de activos totales               |    ${VP}    |    ${f9}  ` );
-        console.log(  `Periodo de pago a acreedores              |    ${VP}    |    ${f10}  ` ); 
+        console.log(  `Razón de efectivo a activo total          |    ${B3()}    |    ${f3}  ` );
+        console.log(  `Razón de costo de financiamiento a ventas |    ${B8()}    |    ${f8}  ` );
+        console.log(  `Rotación de activos totales               |    ${B9()}    |    ${f9}  ` );
+        console.log(  `Periodo de pago a acreedores              |    ${B10()}    |    ${f10}  ` ); 
         let cuali_C=Footer(CL1(),CL2(),CL3(),CL4(),CL5(),CL6());
         Resultados(V4+TotalCuantitativo("C"), cuali_C);break;
 
         case "S": let V5 = Grafico("S",A1(),A2(),A3(),A4());
         console.log("    Indicador   |   Valor   |    Puntos    ");
-        console.log(  `Razón del efectivo                   |    ${VP}    |    ${f5}  ` );
-        console.log(  `Razón de capital de trabajo a ventas |    ${VP}    |    ${f11}  ` );
-        console.log(  `Margen bruto de utilidad             |    ${VP}    |    ${f12}  ` );
+        console.log(  `Razón del efectivo                   |    ${B5()}    |    ${f5}  ` );
+        console.log(  `Razón de capital de trabajo a ventas |    ${B11()}    |    ${f11}  ` );
+        console.log(  `Margen bruto de utilidad             |    ${B12()}    |    ${f12}  ` );
         let cuali_S=Footer(CL1(),CL2(),CL3(),CL4(),CL5(),CL6());
         Resultados(V5+TotalCuantitativo("S"), cuali_S); break;
     }; 
