@@ -17,9 +17,7 @@ const ValueSector = (callback) => {
     return resultado;
 }
 const aux=()=>{let z; z=document.getElementById("empezar").value; return z;};
-
 const T = 1;
-
 boton.addEventListener("click", () => {
     //console.log(ValueSector(document.getElementById("empezar").value))
     Indentificar();
@@ -273,8 +271,6 @@ const F12 =(x)=>{
     
     return reult;
 };
-
-
 
 function A1(){let I; I=document.getElementById("A1").value; return I;};
 function A2(){let I; I=document.getElementById("A2").value; return I;};
