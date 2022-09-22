@@ -16,9 +16,9 @@ const ValueSector = (callback) => {
 
     return resultado;
 }
+const aux=()=>{let z; z=document.getElementById("empezar").value; return z;};
 
-const R = ValueSector(document.getElementById("empezar").value);
-const T = 100;
+const T = 1;
 
 boton.addEventListener("click", () => {
     //console.log(ValueSector(document.getElementById("empezar").value))
@@ -274,9 +274,7 @@ const F12 =(x)=>{
     return reult;
 };
 
-const VP = 50;
 
-const aux="M";
 
 function A1(){let I; I=document.getElementById("A1").value; return I;};
 function A2(){let I; I=document.getElementById("A2").value; return I;};
@@ -303,11 +301,11 @@ function CL4(){let I; I=document.getElementById("CL4").value; return I;};
 function CL5(){let I; I=document.getElementById("CL5").value; return I;};
 function CL6(){let I; I=document.getElementById("CL6").value; return I;};
 
-const f1 = F1(B1()); const f2 = F2(B2(),ValueSector(document.getElementById("empezar").value)); 
-const f3 = F3(B3(),ValueSector(document.getElementById("empezar").value)); 
-const f4 = F4(B4(),ValueSector(document.getElementById("empezar").value)); 
-const f5 = F5(B5(),ValueSector(document.getElementById("empezar").value)); const f6 = F6(B6());
-const f7 = F7(B7()); const f8 = F8(B8(),ValueSector(document.getElementById("empezar").value)); 
+const f1 = F1(B1()); const f2 = F2(B2(),aux()); 
+const f3 = F3(B3(),aux()); 
+const f4 = F4(B4(),aux()); 
+const f5 = F5(B5(),aux()); const f6 = F6(B6());
+const f7 = F7(B7()); const f8 = F8(B8(),aux()); 
 const f9 = F9(B9()); const f10 = F10(B10()); const f11 = F11(B11()); const f12 = F12(B12());
 
 

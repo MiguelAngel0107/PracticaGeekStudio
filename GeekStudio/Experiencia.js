@@ -1,4 +1,4 @@
-const T =100;
+const T =10;
 const I1 = (x, result) =>{
     let reult=0;
 
@@ -11,7 +11,7 @@ const I1 = (x, result) =>{
             if((0)<x&&x<=(T*0.6)){reult =15;}
             if((T*0.61)<x&&x<=(T*0.74)){reult =36;}
             if((T*0.75)<x&&x<=(T*0.94)){reult =83;}
-            if((T*0.95)<x&&x<=T){reult =103;}
+            if((T*0.95)<x){reult =103;}
         }; 
     };
     if(result=="E")
@@ -22,7 +22,7 @@ const I1 = (x, result) =>{
         }else{
             if((0)<x&&x<=(T*0.92)){reult =96;}
             if((T*0.93)<x&&x<=(T*0.99)){reult =127;}
-            if((T*0.1)<=x&&x<=(T*0.1)){reult =71;}
+            if((T*0.1)<=x){reult =71;}
         }; 
     };
     if(result=="M")
@@ -35,7 +35,7 @@ const I1 = (x, result) =>{
             if((T*0.86)<x&&x<=(T*0.92)){reult =37;}
             if((T*0.93)<x&&x<=(T*0.95)){reult =64;}
             if((T*0.96)<x&&x<=(T*0.99)){reult =87;}
-            if(x==T){reult =115;}
+            if(x>T){reult =115;}
         }; 
     };
     if(result=="C")
@@ -48,7 +48,7 @@ const I1 = (x, result) =>{
             if((T*0.66)<x&&x<=(T*0.82)){reult =23;}
             if((T*0.83)<x&&x<=(T*0.88)){reult =43;}
             if((T*0.89)<x&&x<=(T*0.93)){reult =62;}
-            if((T*0.94)<x&&x<=(T*0.1)){reult =102;}
+            if((T*0.94)<x){reult =102;}
         }; 
     };
     if(result=="S")
@@ -62,7 +62,7 @@ const I1 = (x, result) =>{
             if((T*0.77)<x&&x<=(T*0.91)){reult =88;}
             if((T*0.92)<x&&x<=(T*0.97)){reult =97;}
             if((T*0.98)<x&&x<=(T*0.99)){reult =107;}
-            if(x==T){reult=115;}
+            if(x>T){reult=115;}
         }; 
     };
 
@@ -79,7 +79,7 @@ const I2 = (x, result) =>{
         }else{
             if((0)<x&&x<=(T*0.78)){reult =68;}
             if((T*0.79)<x&&x<=(T*0.96)){reult =87;}
-            if((T*0.97)<x&&x<=(T*0.1)){reult =95;}
+            if((T*0.97)<x){reult =95;}
         }; 
     };
     if(result=="E")
@@ -90,7 +90,7 @@ const I2 = (x, result) =>{
         }else{
             if((0)<x&&x<=(T*0.78)){reult =64;}
             if((T*0.79)<x&&x<=(T*0.99)){reult =91;}
-            if((T*0.1)<=x&&x<=(T*0.1)){reult =118;}
+            if((T*0.1)<=x){reult =118;}
         }; 
     };
     if(result=="M")
@@ -102,7 +102,7 @@ const I2 = (x, result) =>{
             if((0)<x&&x<=(T*0.73)){reult =37;}
             if((T*0.74)<x&&x<=(T*0.91)){reult =47;}
             if((T*0.92)<x&&x<=(T*0.98)){reult =78;}
-            if((T*0.99)<x&&x<=(T*0.1)){reult =97;}
+            if((T*0.99)<x){reult =97;}
         }; 
     };
     if(result=="C")
@@ -113,7 +113,7 @@ const I2 = (x, result) =>{
         }else{
             if((0)<x&&x<=(T*0.88)){reult =52;}
             if((T*0.89)<x&&x<=(T*0.98)){reult =78;}
-            if((T*0.99)<x&&x<=(T*0.1)){reult =103;}
+            if((T*0.99)<x){reult =103;}
         }; 
     };
     if(result=="S")
@@ -124,7 +124,7 @@ const I2 = (x, result) =>{
         }else{
             if((0)<x&&x<=(T*0.81)){reult =90;}
             if((T*0.82)<x&&x<=(T*0.99)){reult =98;}
-            if(x==T){reult=107;}
+            if(x>T){reult=107;}
         }; 
     };
 
@@ -218,8 +218,8 @@ const I4 = (x, result) =>{
             if((0)<x&&x<=(T*0.5)){reult =66;}
             if((T*0.5)<x&&x<=(T*0.71)){reult =73;}
             if((T*0.71)<x&&x<=(T*0.95)){reult =81;}
-            if((T*0.95)<x&&x>T){reult =86;}
-            if(T==x){reult =102;}
+            if((T*0.95)<x&&x<T){reult =86;}
+            if(T>=x){reult =102;}
         }; 
     };
     if(result=="M")
@@ -243,7 +243,7 @@ const I4 = (x, result) =>{
             if((0)<x&&x<=(T*0.56)){reult =33;}
             if((T*0.56)<x&&x<=(T*0.93)){reult =54;}
             if((T*0.93)<x&&x<T){reult =64;}
-            if(T==x){reult =92;}
+            if(T>=x){reult =92;}
         }; 
     };
     if(result=="S")
@@ -255,7 +255,7 @@ const I4 = (x, result) =>{
             if((0)<x&&x<=(T*0.65)){reult =55;}
             if((T*0.65)<x&&x<=(T*0.87)){reult =78;}
             if((T*0.87)<x&&x<(T)){reult =88;}
-            if(T==x){reult =107;}
+            if(T>=x){reult =107;}
         }; 
     };
 
@@ -263,8 +263,6 @@ const I4 = (x, result) =>{
 
     return reult;
 };
-
-const ValorAsignado = 60;
 
 export const Grafico = (letra, A1, A2, A3, A4)=> {
 
@@ -275,37 +273,37 @@ export const Grafico = (letra, A1, A2, A3, A4)=> {
         console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses          |    ${A2}    |    ${I2(A2, letra)}  `);
         console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación               |    ${A3}    |   ${I3(A3, letra)}   `);
         console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación                  |    ${A4}    |   ${I4(A4, letra)}   `); 
-        return ValorTotal("A");
+        return ValorTotal("A",A1, A2, A3, A4);
         case "E":console.log("    Indicadores           |   Valor   |    Puntos    ");
         console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses          |    ${A1}    |    ${I1(A1, letra)}  `);
         console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses          |    ${A2}    |    ${I2(A2, letra)}  `);
         console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación               |    ${A3}    |   ${I3(A3, letra)}   `);
         console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación                  |    ${A4}    |   ${I4(A4, letra)}   `); 
-        return ValorTotal("E");
+        return ValorTotal("E",A1, A2, A3, A4);
         case "M":console.log("    Indicadores           |   Valor   |    Puntos    ");
         console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses          |    ${A1}    |    ${I1(A1, letra)}  `);
         console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses          |    ${A2}    |    ${I2(A2, letra)}  `);
         console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación               |    ${A3}    |   ${I3(A3, letra)}   `);
         console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación                  |    ${A4}    |   ${I4(A4, letra)}   `); 
-        return ValorTotal("M");
+        return ValorTotal("M",A1, A2, A3, A4);
         case "C":console.log("    Indicadores           |   Valor   |    Puntos    ");
         console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses          |    ${A1}    |    ${I1(A1, letra)}  `);
         console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses          |    ${A2}    |    ${I2(A2, letra)}  `);
         console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación               |    ${A3}    |   ${I3(A3, letra)}   `);
         console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación                  |    ${A4}    |   ${I4(A4, letra)}   `); 
-        return ValorTotal("C");
+        return ValorTotal("C",A1, A2, A3, A4);
         case "S":console.log("    Indicadores           |   Valor   |    Puntos    ");
         console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras bancarias \nen los últimos 12 meses          |    ${A1}    |    ${I1(A1, letra)}  `);
         console.log(`Porcentaje de pagos en\ntiempo con entidades\nfinancieras NO bancarias\nen los últimos 12 meses          |    ${A2}    |    ${I2(A2, letra)}  `);
         console.log(`Máximo número de atrasos\npresentado en los últimos\n7 meses considerando el\nmesde calificación               |    ${A3}    |   ${I3(A3, letra)}   `);
         console.log(`Porcentaje de saldo sin\ndías de atraso con la\nInstituciónen los últimos\n4 mesesconsiderando el mes\nde calificación                  |    ${A4}    |   ${I4(A4, letra)}   `); 
-        return ValorTotal("S");
+        return ValorTotal("S",A1, A2, A3, A4);
 
     }
 
 }
-const ValorTotal=(x)=>{
+const ValorTotal=(x, A1, A2, A3, A4)=>{
     let Puntaje=0;
-    Puntaje = (I1(ValorAsignado, x))+(I2(ValorAsignado, x))+(I3(ValorAsignado, x))+(I4(ValorAsignado, x));
+    Puntaje = (I1(A1, x))+(I2(A2, x))+(I3(A3, x))+(I4(A4, x));
     return Puntaje;
 };
