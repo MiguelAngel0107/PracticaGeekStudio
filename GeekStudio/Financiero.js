@@ -352,6 +352,19 @@ const Indentificar = () =>{
         Resultados(V5+TotalCuantitativo("S",f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12), cuali_S); break;
     }; 
 
+    document.getElementById("R5").innerHTML=f1;
+    document.getElementById("R6").innerHTML=f2;
+    document.getElementById("R7").innerHTML=f3;
+    document.getElementById("R8").innerHTML=f4;
+    document.getElementById("R9").innerHTML=f5;
+    document.getElementById("R10").innerHTML=f6;
+    document.getElementById("R11").innerHTML=f7;
+    document.getElementById("R12").innerHTML=f8;
+    document.getElementById("R13").innerHTML=f9;
+    document.getElementById("R14").innerHTML=f10;
+    document.getElementById("R15").innerHTML=f11;
+    document.getElementById("R16").innerHTML=f12;
+
 };
 
 

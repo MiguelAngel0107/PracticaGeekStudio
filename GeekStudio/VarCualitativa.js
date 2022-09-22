@@ -78,5 +78,12 @@ export const Footer=(F1, F2, F3, F4, F5,F6)=> {
     console.log(`    Factor 5    |    ${F5}    |    ${f5}  `);
     console.log(`    Factor 6    |    ${F6}    |    ${f6}  `);
 
+    document.getElementById("R17").innerHTML=f1;
+    document.getElementById("R18").innerHTML=f2;
+    document.getElementById("R19").innerHTML=f3;
+    document.getElementById("R20").innerHTML=f4;
+    document.getElementById("R21").innerHTML=f5;
+    document.getElementById("R22").innerHTML=f6;
+
     return (f1+f2+f3+f4+f5+f6);
 };
