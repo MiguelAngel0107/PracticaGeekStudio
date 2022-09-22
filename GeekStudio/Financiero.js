@@ -1,18 +1,30 @@
 import {Grafico} from "./Experiencia.js";
 import {Footer} from "./VarCualitativa.js";
 //Version Funcional
+const AUX=()=>{
+    let Result;
+    Result = document.getElementById("empezar").value;
+    return Result;
+}
 const ValueSector = () => {
     
-    let resultado = document.getElementById("empezar").value;
+    let resultado;
+    switch (AUX()) 
+    {
+        case "A": resultado = "A";break;
+        case "E": resultado = "E";break;
+        case "M": resultado = "M";break;
+        case "C": resultado = "C";break;
+        case "S": resultado = "S";break;
+    }
+
     return resultado;
 }
 
-const result = document.getElementById("empezar").value;
-const boton = document.querySelector("#boton");
+var R = ValueSector();
 const T = 100;
 
 boton.addEventListener("click", () => {
-
     Indentificar();
 })
 
@@ -51,7 +63,7 @@ const F2 =(x, result)=>{
             reult=79;
         }else{
             if(0<x&&x<63){reult =96;}
-            if(38<x&&x<200){reult =91;}
+            if(63<x&&x<200){reult =91;}
             if(200<x){reult =81;}
         };
     };
@@ -267,7 +279,7 @@ const F12 =(x)=>{
 
 const VP = 50;
 
-const aux="A";
+const aux="M";
 
 
 const f1 = F1(VP); const f2 = F2(VP,aux); const f3 = F3(VP,aux); const f4 = F4(VP,aux); const f5 = F5(VP,aux); const f6 = F6(VP);
@@ -278,41 +290,47 @@ const Indentificar = () =>{
     switch (ValueSector()){
 
         case "A": let V1=Grafico("A"); console.log("    Indicador   |   Valor   |    Puntos    ");
-        console.log(  `Rendimiento sobre Capital ROE    |    23    |    ${f1}  ` );
-        console.log(  `Periodo de cobro a Deudores      |    23    |    ${f2}  ` );
-        console.log(  `Razón de efectivo a activo total |    23    |    ${f3}  ` ); 
-        console.log(  `Razón de cobertura de interés    |    23    |    ${f4}  ` ); Footer(V1+TotalCuantitativo());  break;
+        console.log(  `Rendimiento sobre Capital ROE    |    ${VP}    |    ${f1}  ` );
+        console.log(  `Periodo de cobro a Deudores      |    ${VP}    |    ${f2}  ` );
+        console.log(  `Razón de efectivo a activo total |    ${VP}    |    ${f3}  ` ); 
+        console.log(  `Razón de cobertura de interés    |    ${VP}    |    ${f4}  ` ); Footer(V1+TotalCuantitativo("A")); break;
 
         case "E": let V2=Grafico("E");console.log("    Indicador   |   Valor   |    Puntos    ");
-        console.log(  `RRazón de cobertura de interés   |    23    |    ${f4}  ` );
-        console.log(  `Razón del efectivo               |    23    |    ${f5}  ` );
-        console.log(  `Razón de uso de activos fijos    |    23    |    ${f6}  ` ); Footer(V2);break;
+        console.log(  `RRazón de cobertura de interés   |    ${VP}    |    ${f4}  ` );
+        console.log(  `Razón del efectivo               |    ${VP}    |    ${f5}  ` );
+        console.log(  `Razón de uso de activos fijos    |    ${VP}    |    ${f6}  ` ); Footer(V2+TotalCuantitativo("E"));break;
             
         case "M": let V3=Grafico("M");console.log("    Indicador   |   Valor   |    Puntos    "); 
-        console.log(  `Periodo de cobro a deudores                    |    23    |    ${f2}  ` );
-        console.log(  `Razón de efectivo a activo total               |    23    |    ${f3}  ` );
-        console.log(  `Razón de ventas a capital operativo empleado   |    23    |    ${f7}  ` );
-        console.log(  `Razón de costo de financiamiento a ventas      |    23    |    ${f8}  ` ); Footer(V3);break;
+        console.log(  `Periodo de cobro a deudores                    |    ${VP}    |    ${f2}  ` );
+        console.log(  `Razón de efectivo a activo total               |    ${VP}    |    ${f3}  ` );
+        console.log(  `Razón de ventas a capital operativo empleado   |    ${VP}    |    ${f7}  ` );
+        console.log(  `Razón de costo de financiamiento a ventas      |    ${VP}    |    ${f8}  ` ); Footer(V3+TotalCuantitativo("M"));break;
 
         case "C": let V4=Grafico("C");console.log("    Indicador   |   Valor   |    Puntos    ");
-        console.log(  `Razón de efectivo a activo total          |    23    |    ${f3}  ` );
-        console.log(  `Razón de costo de financiamiento a ventas |    23    |    ${f8}  ` );
-        console.log(  `Rotación de activos totales               |    23    |    ${f9}  ` );
-        console.log(  `Periodo de pago a acreedores              |    23    |    ${f10}  ` ); Footer(V4);break;
+        console.log(  `Razón de efectivo a activo total          |    ${VP}    |    ${f3}  ` );
+        console.log(  `Razón de costo de financiamiento a ventas |    ${VP}    |    ${f8}  ` );
+        console.log(  `Rotación de activos totales               |    ${VP}    |    ${f9}  ` );
+        console.log(  `Periodo de pago a acreedores              |    ${VP}    |    ${f10}  ` ); Footer(V4+TotalCuantitativo("C"));break;
 
         case "S": let V5 = Grafico("S");console.log("    Indicador   |   Valor   |    Puntos    ");
-        console.log(  `Razón del efectivo                   |    23    |    ${f5}  ` );
-        console.log(  `Razón de capital de trabajo a ventas |    23    |    ${f11}  ` );
-        console.log(  `Margen bruto de utilidad             |    23    |    ${f12}  ` );Footer(V5+TotalCuantitativo()); break;
+        console.log(  `Razón del efectivo                   |    ${VP}    |    ${f5}  ` );
+        console.log(  `Razón de capital de trabajo a ventas |    ${VP}    |    ${f11}  ` );
+        console.log(  `Margen bruto de utilidad             |    ${VP}    |    ${f12}  ` );Footer(V5+TotalCuantitativo("S")); break;
 
         default : alert("Valor no encontrado");
     }; 
 
 };
 
-const TotalCuantitativo=()=>{
+
+const TotalCuantitativo=(x)=>{
     let Total=0;
-    Total = f1+f2+f3+f4;
+    if(x=="A"){Total = f1+f2+f3+f4;};
+    if(x=="E"){Total = f4+f5+f6;};
+    if(x=="M"){Total = f7+f2+f3+f8;};
+    if(x=="C"){Total = f10+f2+f8+f4;};
+    if(x=="S"){Total = f11+f12+f5;};
+    
     return Total;
 }
 
