@@ -9,7 +9,7 @@ const ValueSector = () => {
 
 const result = document.getElementById("empezar").value;
 const boton = document.querySelector("#boton");
-const T = 500;
+const T = 100;
 
 boton.addEventListener("click", () => {
 
@@ -31,7 +31,7 @@ const F1 =(x)=>{
         };
     return reult;
 };
-const F2 =(x)=>{
+const F2 =(x, result)=>{
     let reult=0;
     if(result=="A")
     {
@@ -58,7 +58,7 @@ const F2 =(x)=>{
     
     return reult;
 };
-const F3 =(x)=>{
+const F3 =(x, result)=>{
     let reult=0;
     if(result=="M")
     {
@@ -96,7 +96,7 @@ const F3 =(x)=>{
     
     return reult;
 };
-const F4 =(x)=>{
+const F4 =(x, result) =>{
     let reult=0;
     if(result=="A")
     {
@@ -126,7 +126,7 @@ const F4 =(x)=>{
     
     return reult;
 };
-const F5 =(x)=>{
+const F5 =(x, result)=>{
     let reult=0;
     if(result=="E")
     {
@@ -180,7 +180,7 @@ const F7 =(x)=>{
     
     return reult;
 };
-const F8 =(x)=>{
+const F8 =(x, result)=>{
     let reult=0;
     if(result=="M")
     {
@@ -266,10 +266,13 @@ const F12 =(x)=>{
 };
 
 
-const f1 = F1(34); const f2 = F2(60); const f3 = F3(); const f4 = F4(); const f5 = F5(); const f6 = F6();
-const f7 = F7(); const f8 = F8(); const f9 = F9(); const f10 = F10(); const f11 = F11(); const f12 = F12();
+const VP = 50
+
+const aux="A";
 
 
+const f1 = F1(VP); const f2 = F2(VP,aux); const f3 = F3(VP,aux); const f4 = F4(VP,aux); const f5 = F5(VP,aux); const f6 = F6(VP);
+const f7 = F7(VP); const f8 = F8(VP,aux); const f9 = F9(VP); const f10 = F10(VP); const f11 = F11(VP); const f12 = F12(VP);
 
 const Indentificar = () =>{
 
@@ -279,7 +282,7 @@ const Indentificar = () =>{
         console.log(  `Rendimiento sobre Capital ROE    |    23    |    ${f1}  ` );
         console.log(  `Periodo de cobro a Deudores      |    23    |    ${f2}  ` );
         console.log(  `Razón de efectivo a activo total |    23    |    ${f3}  ` ); 
-        console.log(  `Razón de cobertura de interés    |    23    |    ${f4}  ` ); Footer(V1);  break;
+        console.log(  `Razón de cobertura de interés    |    23    |    ${f4}  ` ); Footer(V1+TotalCuantitativo());  break;
 
         case "E": let V2=Grafico("E");console.log("    Indicador   |   Valor   |    Puntos    ");
         console.log(  `RRazón de cobertura de interés   |    23    |    ${f4}  ` );
@@ -301,7 +304,7 @@ const Indentificar = () =>{
         case "S": let V5 = Grafico("S");console.log("    Indicador   |   Valor   |    Puntos    ");
         console.log(  `Razón del efectivo                   |    23    |    ${f5}  ` );
         console.log(  `Razón de capital de trabajo a ventas |    23    |    ${f11}  ` );
-        console.log(  `Margen bruto de utilidad             |    23    |    ${f12}  ` );Footer(V5); break;
+        console.log(  `Margen bruto de utilidad             |    23    |    ${f12}  ` );Footer(V5+TotalCuantitativo()); break;
 
         default : alert("Valor no encontrado");
     }; 
@@ -310,7 +313,8 @@ const Indentificar = () =>{
 
 const TotalCuantitativo=()=>{
     let Total=0;
-    Total = f1+f2+f3+f4+f5+f6+f7+f8+f9+f10+f11+f12;
+    Total = f1+f2+f3+f4;
+    return Total;
 }
 
 
