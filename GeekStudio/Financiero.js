@@ -303,8 +303,12 @@ function CL4(){let I; I=document.getElementById("CL4").value; return I;};
 function CL5(){let I; I=document.getElementById("CL5").value; return I;};
 function CL6(){let I; I=document.getElementById("CL6").value; return I;};
 
-const f1 = F1(B1()); const f2 = F2(B2(),aux); const f3 = F3(B3(),aux); const f4 = F4(B4(),aux); const f5 = F5(B5(),aux); const f6 = F6(B6());
-const f7 = F7(B7()); const f8 = F8(B8(),aux); const f9 = F9(B9()); const f10 = F10(B10()); const f11 = F11(B11()); const f12 = F12(B12());
+const f1 = F1(B1()); const f2 = F2(B2(),ValueSector(document.getElementById("empezar").value)); 
+const f3 = F3(B3(),ValueSector(document.getElementById("empezar").value)); 
+const f4 = F4(B4(),ValueSector(document.getElementById("empezar").value)); 
+const f5 = F5(B5(),ValueSector(document.getElementById("empezar").value)); const f6 = F6(B6());
+const f7 = F7(B7()); const f8 = F8(B8(),ValueSector(document.getElementById("empezar").value)); 
+const f9 = F9(B9()); const f10 = F10(B10()); const f11 = F11(B11()); const f12 = F12(B12());
 
 
 
@@ -367,11 +371,15 @@ const TotalCuantitativo=(x)=>{
     if(x=="S"){Total = f11+f12+f5;};
     
     return Total;
-}
-
+};
+const Final=(x,y)=>{
+    let Valor=0;
+    Valor=(x*0.85)+(y*0.15);
+    return Valor;
+};
 const Resultados=(ValorCuanti, ValorCuali)=>{
-
-
-}
+    let Total=Final(ValorCuanti,ValorCuali);
+    alert(`Total de Puntaje Cuantitativo es:  ${ValorCuanti}\nTotal de Puntaje Cuantitativo es:  ${ValorCuali}\nPuntaje Crediticio Total es:  ${Total}`);
+};
 
 
