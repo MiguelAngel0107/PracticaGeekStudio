@@ -1,6 +1,6 @@
 import {Grafico} from "./Experiencia.js";
 import {Footer} from "./VarCualitativa.js";
-
+//Version Funcional
 const ValueSector = () => {
     
     let resultado = document.getElementById("empezar").value;
@@ -265,8 +265,7 @@ const F12 =(x)=>{
     return reult;
 };
 
-
-const VP = 50
+const VP = 50;
 
 const aux="A";
 
