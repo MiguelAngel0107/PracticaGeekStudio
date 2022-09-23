@@ -20,7 +20,13 @@ const aux=()=>{let z; z=document.getElementById("empezar").value; return z;};
 const T = 1;
 boton.addEventListener("click", () => {
     //console.log(ValueSector(document.getElementById("empezar").value))
+    for(let i=1; i<=22;i++)
+    {
+        document.getElementById(`R${i}`).innerHTML="-";
+    };
     Indentificar();
+
+
 })
 
 const F1 =(x)=>{
@@ -369,8 +375,8 @@ const Indentificar = () =>{
             document.getElementById("R11").innerHTML=f7;
             document.getElementById("R12").innerHTML=f8; break;
         case "C": 
-            document.getElementById("R6").innerHTML=f2;
-            document.getElementById("R8").innerHTML=f4;
+            document.getElementById("R7").innerHTML=f3;
+            document.getElementById("R13").innerHTML=f9;
             document.getElementById("R12").innerHTML=f8;
             document.getElementById("R14").innerHTML=f10; break;
         case "S":
