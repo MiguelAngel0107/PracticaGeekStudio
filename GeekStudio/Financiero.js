@@ -1,5 +1,6 @@
 import {Grafico} from "./Experiencia.js";
 import {Footer} from "./VarCualitativa.js";
+import {Data} from "./DatosExcel.js"
 
 //Version Funcional
 //Esta es la version v1.0, funciona y hoy es 27/09/22
@@ -22,7 +23,9 @@ const ValueSector = (callback) => {
 const aux=()=>{let z; z=document.getElementById("empezar").value; return z;};
 const T = 1;
 boton.addEventListener("click", () => {
-    //console.log(ValueSector(document.getElementById("empezar").value))
+    console.log("Hola");
+    console.log(Data().agricola.f1);
+
     for(let i=1; i<=22;i++)
     {
         document.getElementById(`R${i}`).innerHTML="-";
