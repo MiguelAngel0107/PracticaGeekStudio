@@ -1,6 +1,9 @@
 import {Grafico} from "./Experiencia.js";
 import {Footer} from "./VarCualitativa.js";
+
 //Version Funcional
+//Esta es la version v1.0, funciona y hoy es 27/09/22
+
 const ValueSector = (callback) => {
     
     let resultado;
