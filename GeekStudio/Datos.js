@@ -98,8 +98,32 @@ export const Datos = {
             ],
             I2:[
                 [["Las características reflejan debilidades importantes en las perspectivas de crecimiento y en los indicadores financieros clave, los márgenes de utilidad y la competitividad. Se registran inestabilidades extremas en la industria basadas en cambios tecnológicos, regulaciones fiscales y laborales. El ambiente competitivo es intensivo entre múltiples competidores peleando por una limitada demanda o características monopolísticas con barreras de entrada al mercado extremadamente altas."],118],
-                [],
-                []
+                [["Las características de la industria reflejan tendencias mixtas en crecimiento y en los indicadores financieros clave, los márgenes de utilidad y la competitividad. La industria es considerada con cierto grado de sensibilidad a los cambios en la tecnología."],125],
+                [["Las características de la industria reflejan crecimiento y desempeño sobresaliente y estable, sus indicadores financieros clave son crecientes y tienen poca sensibilidad."],131],
+                [["ND", "Sin Informacion"],123]
+            ],
+            I3:[
+                [["Menos del 15% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],141],
+                [["Entre 15% y 35% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],123],
+                [["Más del 35% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],97],
+                [["ND", "Sin Informacion"],100]
+            ],
+            I4:[
+                [["Estados financieros auditados durante los 2 últimos años."],130],
+                [["Estados financieros auditados durante el último año o no auditados."],118],
+                [["ND", "Sin Informacion"],124]
+            ],
+            I5:[
+                [["La estructura organizacional está alineada con los objetivos del negocio y el entorno de control interno es sólido."],128],
+                [["La estructura organizacional se encuentra de alguna manera inconsistente con respecto a los actuales objetivos del negocio. Se observan varios cambios organizacionales que han tenido ciertos impactos en la capacidad del deudor para operar y entregar sus productos de forma coordinada y eficiente."],106],
+                [["Existen claras debilidades en la estructura organizacional que ponen en alto riesgo la capacidad de generar flujos de efectivo sostenible para enfrentar sus obligaciones de deuda."],60],
+                [["ND", "Sin Informacion"],70]
+            ],
+            I6:[
+                [["Un solo grupo o persona tiene más del 33% de la tenencia accionaria."],123],
+                [["Un solo grupo o persona tiene entre el 10% y el 33% de la tenencia accionaria"],131],
+                [["Un solo grupo o persona tiene menos del 10% de la tenencia accionaria."],147],
+                [["ND", "Sin Informacion"],127]
             ]
         }
     },
@@ -154,7 +178,40 @@ export const Datos = {
             ]
         },
         ValorCualitativo:{
-
+            I1:[
+                [rangeD(range(-50,7),7), 124],
+                [rangeD(range(7,50)), 120],
+                [["ND", "Sin Informacion"],121]
+            ],
+            I2:[
+                [["Las características reflejan debilidades importantes en las perspectivas de crecimiento y en los indicadores financieros clave, los márgenes de utilidad y la competitividad. Se registran inestabilidades extremas en la industria basadas en cambios tecnológicos, regulaciones fiscales y laborales. El ambiente competitivo es intensivo entre múltiples competidores peleando por una limitada demanda o características monopolísticas con barreras de entrada al mercado extremadamente altas."],118],
+                [["Las características de la industria reflejan tendencias mixtas en crecimiento y en los indicadores financieros clave, los márgenes de utilidad y la competitividad. La industria es considerada con cierto grado de sensibilidad a los cambios en la tecnología."],125],
+                [["Las características de la industria reflejan crecimiento y desempeño sobresaliente y estable, sus indicadores financieros clave son crecientes y tienen poca sensibilidad."],131],
+                [["ND", "Sin Informacion"],123]
+            ],
+            I3:[
+                [["Menos del 15% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],141],
+                [["Entre 15% y 35% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],123],
+                [["Más del 35% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],97],
+                [["ND", "Sin Informacion"],100]
+            ],
+            I4:[
+                [["Estados financieros auditados durante los 2 últimos años."],130],
+                [["Estados financieros auditados durante el último año o no auditados."],118],
+                [["ND", "Sin Informacion"],124]
+            ],
+            I5:[
+                [["La estructura organizacional está alineada con los objetivos del negocio y el entorno de control interno es sólido."],128],
+                [["La estructura organizacional se encuentra de alguna manera inconsistente con respecto a los actuales objetivos del negocio. Se observan varios cambios organizacionales que han tenido ciertos impactos en la capacidad del deudor para operar y entregar sus productos de forma coordinada y eficiente."],106],
+                [["Existen claras debilidades en la estructura organizacional que ponen en alto riesgo la capacidad de generar flujos de efectivo sostenible para enfrentar sus obligaciones de deuda."],60],
+                [["ND", "Sin Informacion"],70]
+            ],
+            I6:[
+                [["Un solo grupo o persona tiene más del 33% de la tenencia accionaria."],123],
+                [["Un solo grupo o persona tiene entre el 10% y el 33% de la tenencia accionaria"],131],
+                [["Un solo grupo o persona tiene menos del 10% de la tenencia accionaria."],147],
+                [["ND", "Sin Informacion"],127]
+            ]
         }
     },
 
@@ -217,7 +274,40 @@ export const Datos = {
             ]
         },
         ValorCualitativo:{
-
+            I1:[
+                [rangeD(range(-50,7),7), 124],
+                [rangeD(range(7,50)), 120],
+                [["ND", "Sin Informacion"],121]
+            ],
+            I2:[
+                [["Las características reflejan debilidades importantes en las perspectivas de crecimiento y en los indicadores financieros clave, los márgenes de utilidad y la competitividad. Se registran inestabilidades extremas en la industria basadas en cambios tecnológicos, regulaciones fiscales y laborales. El ambiente competitivo es intensivo entre múltiples competidores peleando por una limitada demanda o características monopolísticas con barreras de entrada al mercado extremadamente altas."],118],
+                [["Las características de la industria reflejan tendencias mixtas en crecimiento y en los indicadores financieros clave, los márgenes de utilidad y la competitividad. La industria es considerada con cierto grado de sensibilidad a los cambios en la tecnología."],125],
+                [["Las características de la industria reflejan crecimiento y desempeño sobresaliente y estable, sus indicadores financieros clave son crecientes y tienen poca sensibilidad."],131],
+                [["ND", "Sin Informacion"],123]
+            ],
+            I3:[
+                [["Menos del 15% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],141],
+                [["Entre 15% y 35% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],123],
+                [["Más del 35% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],97],
+                [["ND", "Sin Informacion"],100]
+            ],
+            I4:[
+                [["Estados financieros auditados durante los 2 últimos años."],130],
+                [["Estados financieros auditados durante el último año o no auditados."],118],
+                [["ND", "Sin Informacion"],124]
+            ],
+            I5:[
+                [["La estructura organizacional está alineada con los objetivos del negocio y el entorno de control interno es sólido."],128],
+                [["La estructura organizacional se encuentra de alguna manera inconsistente con respecto a los actuales objetivos del negocio. Se observan varios cambios organizacionales que han tenido ciertos impactos en la capacidad del deudor para operar y entregar sus productos de forma coordinada y eficiente."],106],
+                [["Existen claras debilidades en la estructura organizacional que ponen en alto riesgo la capacidad de generar flujos de efectivo sostenible para enfrentar sus obligaciones de deuda."],60],
+                [["ND", "Sin Informacion"],70]
+            ],
+            I6:[
+                [["Un solo grupo o persona tiene más del 33% de la tenencia accionaria."],123],
+                [["Un solo grupo o persona tiene entre el 10% y el 33% de la tenencia accionaria"],131],
+                [["Un solo grupo o persona tiene menos del 10% de la tenencia accionaria."],147],
+                [["ND", "Sin Informacion"],127]
+            ]
         }
     },
 
@@ -279,7 +369,40 @@ export const Datos = {
             ]
         },
         ValorCualitativo:{
-
+            I1:[
+                [rangeD(range(-50,7),7), 124],
+                [rangeD(range(7,50)), 120],
+                [["ND", "Sin Informacion"],121]
+            ],
+            I2:[
+                [["Las características reflejan debilidades importantes en las perspectivas de crecimiento y en los indicadores financieros clave, los márgenes de utilidad y la competitividad. Se registran inestabilidades extremas en la industria basadas en cambios tecnológicos, regulaciones fiscales y laborales. El ambiente competitivo es intensivo entre múltiples competidores peleando por una limitada demanda o características monopolísticas con barreras de entrada al mercado extremadamente altas."],118],
+                [["Las características de la industria reflejan tendencias mixtas en crecimiento y en los indicadores financieros clave, los márgenes de utilidad y la competitividad. La industria es considerada con cierto grado de sensibilidad a los cambios en la tecnología."],125],
+                [["Las características de la industria reflejan crecimiento y desempeño sobresaliente y estable, sus indicadores financieros clave son crecientes y tienen poca sensibilidad."],131],
+                [["ND", "Sin Informacion"],123]
+            ],
+            I3:[
+                [["Menos del 15% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],141],
+                [["Entre 15% y 35% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],123],
+                [["Más del 35% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],97],
+                [["ND", "Sin Informacion"],100]
+            ],
+            I4:[
+                [["Estados financieros auditados durante los 2 últimos años."],130],
+                [["Estados financieros auditados durante el último año o no auditados."],118],
+                [["ND", "Sin Informacion"],124]
+            ],
+            I5:[
+                [["La estructura organizacional está alineada con los objetivos del negocio y el entorno de control interno es sólido."],128],
+                [["La estructura organizacional se encuentra de alguna manera inconsistente con respecto a los actuales objetivos del negocio. Se observan varios cambios organizacionales que han tenido ciertos impactos en la capacidad del deudor para operar y entregar sus productos de forma coordinada y eficiente."],106],
+                [["Existen claras debilidades en la estructura organizacional que ponen en alto riesgo la capacidad de generar flujos de efectivo sostenible para enfrentar sus obligaciones de deuda."],60],
+                [["ND", "Sin Informacion"],70]
+            ],
+            I6:[
+                [["Un solo grupo o persona tiene más del 33% de la tenencia accionaria."],123],
+                [["Un solo grupo o persona tiene entre el 10% y el 33% de la tenencia accionaria"],131],
+                [["Un solo grupo o persona tiene menos del 10% de la tenencia accionaria."],147],
+                [["ND", "Sin Informacion"],127]
+            ]
         }
     },
 
@@ -336,7 +459,40 @@ export const Datos = {
             ]
         },
         ValorCualitativo:{
-
+            I1:[
+                [rangeD(range(-50,7),7), 124],
+                [rangeD(range(7,50)), 120],
+                [["ND", "Sin Informacion"],121]
+            ],
+            I2:[
+                [["Las características reflejan debilidades importantes en las perspectivas de crecimiento y en los indicadores financieros clave, los márgenes de utilidad y la competitividad. Se registran inestabilidades extremas en la industria basadas en cambios tecnológicos, regulaciones fiscales y laborales. El ambiente competitivo es intensivo entre múltiples competidores peleando por una limitada demanda o características monopolísticas con barreras de entrada al mercado extremadamente altas."],118],
+                [["Las características de la industria reflejan tendencias mixtas en crecimiento y en los indicadores financieros clave, los márgenes de utilidad y la competitividad. La industria es considerada con cierto grado de sensibilidad a los cambios en la tecnología."],125],
+                [["Las características de la industria reflejan crecimiento y desempeño sobresaliente y estable, sus indicadores financieros clave son crecientes y tienen poca sensibilidad."],131],
+                [["ND", "Sin Informacion"],123]
+            ],
+            I3:[
+                [["Menos del 15% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],141],
+                [["Entre 15% y 35% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],123],
+                [["Más del 35% de las ventas totales anuales de la empresa están concentradas en los tres principales clientes al cierre del ejercicio anual."],97],
+                [["ND", "Sin Informacion"],100]
+            ],
+            I4:[
+                [["Estados financieros auditados durante los 2 últimos años."],130],
+                [["Estados financieros auditados durante el último año o no auditados."],118],
+                [["ND", "Sin Informacion"],124]
+            ],
+            I5:[
+                [["La estructura organizacional está alineada con los objetivos del negocio y el entorno de control interno es sólido."],128],
+                [["La estructura organizacional se encuentra de alguna manera inconsistente con respecto a los actuales objetivos del negocio. Se observan varios cambios organizacionales que han tenido ciertos impactos en la capacidad del deudor para operar y entregar sus productos de forma coordinada y eficiente."],106],
+                [["Existen claras debilidades en la estructura organizacional que ponen en alto riesgo la capacidad de generar flujos de efectivo sostenible para enfrentar sus obligaciones de deuda."],60],
+                [["ND", "Sin Informacion"],70]
+            ],
+            I6:[
+                [["Un solo grupo o persona tiene más del 33% de la tenencia accionaria."],123],
+                [["Un solo grupo o persona tiene entre el 10% y el 33% de la tenencia accionaria"],131],
+                [["Un solo grupo o persona tiene menos del 10% de la tenencia accionaria."],147],
+                [["ND", "Sin Informacion"],127]
+            ]
         }
     }
 }
