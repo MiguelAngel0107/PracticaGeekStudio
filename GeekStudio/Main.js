@@ -1,10 +1,11 @@
 import {Datos} from "./Datos.js";
 
+//Datos.agricola.ValorCuantitativo.F4 //Modelo de como es el Array
 let Valor1= Datos.agricola.ValorCuantitativo.F4;
 let prueba= Datos.agricola.ValorCualitativo.I2;
 
 //El paramentro arr, tiene que ser un indicador.
-const EncontrarValor=(arr, input)=>{
+const ReturnValor=(arr, input)=>{
     let valor=0;
     for(let i=0; i<arr.length; i++)
     {
@@ -23,8 +24,17 @@ const EncontrarValor=(arr, input)=>{
     return valor;
 } 
 
-console.log(EncontrarValor(Valor1, -0.5))
-console.log(prueba[0][0])
+const boton = document.getElementById("boton")
+boton.addEventListener("click", () => {
+    let sector = document.getElementById("empezar").value;
+    for(let i=1; i<=22;i++)
+    {
+        document.getElementById(`R${i}`).innerHTML="-";
+    };
+    console.log(i+5)
+
+})
+
 
 
 
