@@ -1,6 +1,7 @@
 import {Datos} from "./Datos.js";
 
-let Valor1= Datos.agricola.ValorCuantitativo.I1;
+let Valor1= Datos.agricola.ValorCuantitativo.F4;
+let prueba= Datos.agricola.ValorCuantitativo.F4;
 
 //El paramentro arr, tiene que ser un indicador.
 const EncontrarValor=(arr, input)=>{
@@ -20,7 +21,10 @@ const EncontrarValor=(arr, input)=>{
     }
 } 
 
+console.log(EncontrarValor(Valor1, -0.5))
+console.log(prueba[0][0])
 
-console.log(EncontrarValor(Valor1, 60))
+
+
 
     
