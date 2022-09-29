@@ -91,9 +91,19 @@ export const Datos = {
             ]
         },
         ValorCualitativo:{
-
+            I1:[
+                [rangeD(range(-50,7),7), 124],
+                [rangeD(range(7,50)), 120],
+                [["ND", "Sin Informacion"],121]
+            ],
+            I2:[
+                [["Las características reflejan debilidades importantes en las perspectivas de crecimiento y en los indicadores financieros clave, los márgenes de utilidad y la competitividad. Se registran inestabilidades extremas en la industria basadas en cambios tecnológicos, regulaciones fiscales y laborales. El ambiente competitivo es intensivo entre múltiples competidores peleando por una limitada demanda o características monopolísticas con barreras de entrada al mercado extremadamente altas."],118],
+                [],
+                []
+            ]
         }
     },
+
     energia:{
         ValorCuantitativo:{
             I1:[
@@ -147,60 +157,62 @@ export const Datos = {
 
         }
     },
+
     manufatura:{
         ValorCuantitativo:{
             I1:[
-                [rangeD(range(0,60)), 15],
-                [rangeD(range(61,74)), 36],
-                [rangeD(range(75,94)), 83],
-                [rangeD(range(95,100)), 103],
-                [["ND", "Sin Informacion"],70]
+                [rangeD(range(0,85)), 2],
+                [rangeD(range(86,92)), 37],
+                [rangeD(range(93,95)), 64],
+                [rangeD(range(96,99)), 87],
+                [rangeD(range(100,120)), 115],
+                [["ND", "Sin Informacion"],94]
             ],
             I2:[
-                [rangeD(range(0,78)), 68],
-                [rangeD(range(79,96)), 87],
-                [rangeD(range(97,100)), 95],
-                [["ND", "Sin Informacion"],69]
+                [rangeD(range(0,73)), 37],
+                [rangeD(range(74,91)), 47],
+                [rangeD(range(92,98)), 78],
+                [rangeD(range(99,100)), 97],
+                [["ND", "Sin Informacion"],82]
             ],
             I3:[
                 [rangeD(range(0,0)), 86],
-                [rangeD(range(1,1)), 39],
-                [rangeD(range(2,2)), -50],
-                [rangeD(range(3,10)), -100],
-                [["ND", "Sin Informacion"],63]
+                [rangeD(range(1,1)), 53],
+                [rangeD(range(2,2)), 22],
+                [rangeD(range(3,10)), -28],
+                [["ND", "Sin Informacion"],70]
             ],
             I4:[
-                [rangeD(range(0,46)), 51],
-                [rangeD(range(47,67)), 58],
-                [rangeD(range(68,97)), 66],
-                [rangeD(range(98,100)), 79],
-                [["ND", "Sin Informacion"],73]
+                [rangeD(range(0,66)), 53],
+                [rangeD(range(67,81)), 66],
+                [rangeD(range(82,95)), 68],
+                [rangeD(range(96,110)), 85],
+                [["ND", "Sin Informacion"],77]
             ],
             F1:[
-                [["Negativos","negativos"],52],
-                [rangeD(range(-100,0),-0.7), 74],
-                [rangeD(range(-1,3),3.2), 86],
-                [rangeD(range(3,13),13.4), 97],
-                [rangeD(range(13,100)), 112],
-                [["ND", "Sin Informacion"],65]
+                [rangeD(range(0,62)), 96],
+                [rangeD(range(63,200)), 91],
+                [rangeD(range(200,250)), 81],
+                [["ND", "Sin Informacion"],79]
             ],
             F2:[
-                [rangeD(range(0,37)), 103],
-                [rangeD(range(38,90)), 91],
-                [rangeD(range(91,100)), 77],
-                [["ND", "Sin Informacion"],72]
+                [rangeD(range(-100,0),0.6), 86],
+                [rangeD(range(0,7),7.7), 103],
+                [rangeD(range(7,10)), 118],
+                [["ND", "Sin Informacion"],63]
             ],
             F3:[
-                [rangeD(range(-100,0),0.1), 78],
-                [rangeD(range(0,2),2.2), 88],
-                [rangeD(range(2,20)), 109],
-                [["ND", "Sin Informacion"],73]
+                [rangeD(range(-100,0),0), 75],
+                [rangeD(range(0,1),1.3), 88],
+                [rangeD(range(1,2)), 95],
+                [rangeD(range(3,10)), 103],
+                [["ND", "Sin Informacion"],75]
             ],
             F4:[
-                [rangeD(range(-100,0),0), 77],
-                [rangeD(range(0,2),2.4), 87],
-                [rangeD(range(2,3),3.5), 105],
-                [rangeD(range(3,30)), 123],
+                [rangeD(range(-100,1),1.8), 110],
+                [rangeD(range(1,2),2.4), 100],
+                [rangeD(range(2,4),4.5), 90],
+                [rangeD(range(4,30)), 65],
                 [["ND", "Sin Informacion"],68]
             ]
         },
@@ -208,17 +220,120 @@ export const Datos = {
 
         }
     },
+
     comercio:{
         ValorCuantitativo:{
-
+            I1:[
+                [rangeD(range(0,65)), 3],
+                [rangeD(range(66,82)), 23],
+                [rangeD(range(83,88)), 43],
+                [rangeD(range(89,93)), 62],
+                [rangeD(range(94,100)), 102],
+                [["ND", "Sin Informacion"],98]
+            ],
+            I2:[
+                [rangeD(range(0,88)), 52],
+                [rangeD(range(89,98)), 78],
+                [rangeD(range(99,100)), 103],
+                [["ND", "Sin Informacion"],89]
+            ],
+            I3:[
+                [rangeD(range(0,0)), 98],
+                [rangeD(range(1,1)), 39],
+                [rangeD(range(2,2)), 11],
+                [rangeD(range(3,10)), -43],
+                [["ND", "Sin Informacion"],69]
+            ],
+            I4:[
+                [rangeD(range(0,55)), 33],
+                [rangeD(range(56,92)), 54],
+                [rangeD(range(93,99)), 64],
+                [rangeD(range(100,120)), 92],
+                [["ND", "Sin Informacion"],78]
+            ],
+            F1:[
+                [rangeD(range(-100,0),0.3), 81],
+                [rangeD(range(0,1),1.6), 98],
+                [rangeD(range(1,15)), 108],
+                [["ND", "Sin Informacion"],61]
+            ],
+            F2:[
+                [rangeD(range(-100,1),1.4), 96],
+                [rangeD(range(1,4),4.8), 91],
+                [rangeD(range(4,50)), 85],
+                [["ND", "Sin Informacion"],83]
+            ],
+            F3:[
+                [rangeD(range(0,0)), 78],
+                [rangeD(range(1,1),1.3), 82],
+                [rangeD(range(1,1),1.6), 102],
+                [rangeD(range(1,10)), 114],
+                [["ND", "Sin Informacion"],54]
+            ],
+            F4:[
+                [rangeD(range(0,99)), 97],
+                [rangeD(range(100,214)), 92],
+                [rangeD(range(215,430),3.5), 88],
+                [rangeD(range(431,500)), 79],
+                [["ND", "Sin Informacion"],76]
+            ]
         },
         ValorCualitativo:{
 
         }
     },
+
     servicio:{
         ValorCuantitativo:{
-
+            I1:[
+                [rangeD(range(0,57)), 54],
+                [rangeD(range(58,76)), 77],
+                [rangeD(range(77,91)), 88],
+                [rangeD(range(92,97)), 97],
+                [rangeD(range(98,99)), 107],
+                [rangeD(range(100,200)), 115],
+                [["ND", "Sin Informacion"],114]
+            ],
+            I2:[
+                [rangeD(range(0,81)), 90],
+                [rangeD(range(82,99)), 96],
+                [rangeD(range(100,200)), 107],
+                [["ND", "Sin Informacion"],104]
+            ],
+            I3:[
+                [rangeD(range(0,0)), 115],
+                [rangeD(range(1,1)), 73],
+                [rangeD(range(2,2)), 24],
+                [rangeD(range(3,10)), -11],
+                [["ND", "Sin Informacion"],94]
+            ],
+            I4:[
+                [rangeD(range(0,64)), 55],
+                [rangeD(range(65,86)), 78],
+                [rangeD(range(87,99)), 88],
+                [rangeD(range(100,150)), 107],
+                [["ND", "Sin Informacion"],98]
+            ],
+            F1:[
+                [rangeD(range(-100,0),0.3), 97],
+                [rangeD(range(0,4),4.1), 108],
+                [rangeD(range(4,23),23.4), 115],
+                [rangeD(range(23,100)), 120],
+                [["ND", "Sin Informacion"],40]
+            ],
+            F2:[
+                [rangeD(range(-100,0),0), 118],
+                [rangeD(range(0,11),11.4), 126],
+                [rangeD(range(11,24)), 119],
+                [rangeD(range(25,100)), 104],
+                [["ND", "Sin Informacion"],79]
+            ],
+            F3:[
+                [rangeD(range(-100,5)), 93],
+                [rangeD(range(6,56)), 109],
+                [rangeD(range(57,100)), 118],
+                [["ND", "Sin Informacion"],50]
+            ]
         },
         ValorCualitativo:{
 

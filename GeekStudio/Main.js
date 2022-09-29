@@ -1,7 +1,7 @@
 import {Datos} from "./Datos.js";
 
 let Valor1= Datos.agricola.ValorCuantitativo.F4;
-let prueba= Datos.agricola.ValorCuantitativo.F4;
+let prueba= Datos.agricola.ValorCualitativo.I2;
 
 //El paramentro arr, tiene que ser un indicador.
 const EncontrarValor=(arr, input)=>{
@@ -19,6 +19,8 @@ const EncontrarValor=(arr, input)=>{
             }
         }
     }
+    valor="Numero Incorrecto";
+    return valor;
 } 
 
 console.log(EncontrarValor(Valor1, -0.5))
