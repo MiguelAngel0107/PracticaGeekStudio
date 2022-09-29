@@ -25,6 +25,7 @@ const ReturnValor=(arr, input)=>{
 } 
 
 const boton = document.getElementById("boton")
+
 boton.addEventListener("click", () => {
     let sector = document.getElementById("empezar").value;
     for(let i=1; i<=22;i++)
@@ -33,6 +34,14 @@ boton.addEventListener("click", () => {
     };
     console.log(i+5)
 
+    //Codigo Prueba No confirmado{}
+
+    const ArregloInputAgricola=[];
+    for(let i=0; i<4;i++)
+    {
+        ArregloInputAgricola[i]=document.getElementById(`B${i}`).value;
+    }
+    console.log(ArregloInputAgricola);
 })
 
 
