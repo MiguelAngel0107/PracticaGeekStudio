@@ -1,7 +1,8 @@
 import {Datos} from "./Datos.js";
 
 //Datos.agricola.ValorCuantitativo.F4 //Modelo de como es el Array
-let DatosAgricola= Datos.agricola.ValorCuantitativo.F1;
+let prueba= Datos.agricola.ValorCuantitativo;
+let DatosAgricola1= Datos.agricola.ValorCuantitativo["F1"];
 
 //El paramentro arr, tiene que ser un indicador.
 const ReturnValor=(arr, input)=>{
@@ -67,14 +68,33 @@ const CreateInputCuali=(arr)=>{
     }
     return arr;
 }
+const Calcular=(sector, Iarr, Oarr)=>{
+    let S; let C = Datos.agricola.ValorCualitativo;
+    switch(sector){
+        case "A": S=Datos.agricola.ValorCuantitativo;break;
+        case "E": S=Datos.energia.ValorCuantitativo;break;
+        case "M": S=Datos.manufatura.ValorCuantitativo;break;
+        case "C": S=Datos.comercio.ValorCuantitativo;break;
+        case "S": S=Datos.servicio.ValorCuantitativo;break;
+    }
+    for(let i=0; i<4; i++){
+        let aux;
+        aux = ReturnValor(S[`F${i}`], Iarr[0][i]);
+        Oarr.push(aux);
+    }
+    for(let i=0; i<4;i++){
+        let Aux;
+        Aux= ReturnValor(C[`I${i+1}`],Iarr[1][i])
+        Oarr.push(Aux);
+    }
+    return Oarr;
+}
 
 const boton = document.getElementById("boton");
 
-const ArrInputA=[[],[]]; const ArrInputE=[[],[]]; const ArrInputM=[[],[]];
-const ArrInputC=[[],[]]; const ArrInputS=[[],[]];
+const ArrInput=[[],[]]; 
 
-const ArrReturnA=[]; const ArrReturnE=[]; const ArrReturnM=[];
-const ArrReturnC=[]; const ArrReturnS=[];
+const ArrReturn=[]; 
 
 boton.addEventListener("click", () => {
     let sector = document.getElementById("sector").value;
@@ -82,6 +102,14 @@ boton.addEventListener("click", () => {
     {
         document.getElementById(`R${i}`).innerHTML="-";
     };  
+
+    //Asignar Valores
+    CreateInputCuanti(sector, ArrInput[0]);
+    CreateInputCuali(ArrInput[1]);
+
+    
+    //Procesar Informacion
+    console.log(Calcular(sector, ArrInput, ArrReturn));
     
 
 
