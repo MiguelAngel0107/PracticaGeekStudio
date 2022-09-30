@@ -1,9 +1,7 @@
 import {Datos} from "./Datos.js";
-
-//Datos.agricola.ValorCuantitativo.F4 //Modelo de como es el Array
-let prueba= Datos.agricola.ValorCuantitativo;
-let DatosAgricola1= Datos.agricola.ValorCuantitativo["F1"];
-
+const boton = document.getElementById("boton");
+const ArrInput=[[],[]]; 
+const ArrReturn=[];
 //El paramentro arr, tiene que ser un indicador.
 const ReturnValor=(arr, input)=>{
     let valor=0;
@@ -69,7 +67,7 @@ const CreateInputCuali=(arr)=>{
     return arr;
 }
 const Calcular=(sector, Iarr, Oarr)=>{
-    let S; let C = Datos.agricola.ValorCualitativo;
+    let S; let C = Datos.agricola.ValorCualitativo;let m=0;
     switch(sector){
         case "A": S=Datos.agricola.ValorCuantitativo;break;
         case "E": S=Datos.energia.ValorCuantitativo;break;
@@ -77,24 +75,57 @@ const Calcular=(sector, Iarr, Oarr)=>{
         case "C": S=Datos.comercio.ValorCuantitativo;break;
         case "S": S=Datos.servicio.ValorCuantitativo;break;
     }
-    for(let i=0; i<4; i++){
-        let aux;
+    if(sector=="S"||sector=="E"){m=1}
+    for(let i=0; i<(8-m); i++){
+        let aux; 
         aux = ReturnValor(S[`F${i}`], Iarr[0][i]);
         Oarr.push(aux);
-    }
-    for(let i=0; i<4;i++){
+    }if(sector=="S"||sector=="E"){Oarr.push(0)}
+    for(let i=0; i<6;i++){
         let Aux;
         Aux= ReturnValor(C[`I${i+1}`],Iarr[1][i])
         Oarr.push(Aux);
     }
     return Oarr;
 }
-
-const boton = document.getElementById("boton");
-
-const ArrInput=[[],[]]; 
-
-const ArrReturn=[]; 
+const Mostrar=(sector,arr)=>{
+    document.getElementById("R1").innerHTML=arr[0];
+    document.getElementById("R2").innerHTML=arr[1];
+    document.getElementById("R3").innerHTML=arr[2];
+    document.getElementById("R4").innerHTML=arr[3];
+    switch(sector)
+    {
+        case "A":
+            document.getElementById("R5").innerHTML=arr[4];
+            document.getElementById("R6").innerHTML=arr[5];
+            document.getElementById("R7").innerHTML=arr[6];
+            document.getElementById("R8").innerHTML=arr[7]; break;
+        case "E":
+            document.getElementById("R8").innerHTML=arr[4];
+            document.getElementById("R9").innerHTML=arr[5];
+            document.getElementById("R10").innerHTML=arr[6]; break;
+        case "M":
+            document.getElementById("R6").innerHTML=arr[4];
+            document.getElementById("R7").innerHTML=arr[5];
+            document.getElementById("R11").innerHTML=arr[6];
+            document.getElementById("R12").innerHTML=arr[7]; break;
+        case "C": 
+            document.getElementById("R7").innerHTML=arr[4];
+            document.getElementById("R13").innerHTML=arr[5];
+            document.getElementById("R12").innerHTML=arr[6];
+            document.getElementById("R14").innerHTML=arr[7]; break;
+        case "S":
+            document.getElementById("R9").innerHTML=arr[4];
+            document.getElementById("R15").innerHTML=arr[5];
+            document.getElementById("R16").innerHTML=arr[6];break;
+    };
+    document.getElementById("R17").innerHTML=arr[8];
+    document.getElementById("R18").innerHTML=arr[9];
+    document.getElementById("R19").innerHTML=arr[10];
+    document.getElementById("R20").innerHTML=arr[11];
+    document.getElementById("R21").innerHTML=arr[12];
+    document.getElementById("R22").innerHTML=arr[13];
+}
 
 boton.addEventListener("click", () => {
     let sector = document.getElementById("sector").value;
@@ -102,21 +133,13 @@ boton.addEventListener("click", () => {
     {
         document.getElementById(`R${i}`).innerHTML="-";
     };  
-
     //Asignar Valores
     CreateInputCuanti(sector, ArrInput[0]);
     CreateInputCuali(ArrInput[1]);
-
-    
     //Procesar Informacion
-    console.log(Calcular(sector, ArrInput, ArrReturn));
-    
-
-
+    Calcular(sector, ArrInput, ArrReturn);
+    //Pintar por pantalla resultados
+    console.log(ArrReturn);
+    Mostrar(sector, ArrReturn);
+    ArrReturn.length=0;
 })
-
-
-
-
-
-    
