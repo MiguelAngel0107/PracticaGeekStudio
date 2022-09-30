@@ -20,7 +20,8 @@ const ReturnValor=(arr, input)=>{
     }
     valor="Numero Incorrecto";
     return valor;
-} 
+}
+//Asignar valores para la parte Cuantitativa 
 const CreateInputCuanti=(sector, arr)=>{
     let aux=0;
     for(let i=0; i<16;i++){
@@ -57,6 +58,7 @@ const CreateInputCuanti=(sector, arr)=>{
     }
     return arr;
 }
+//Asignar valores para la parte Cualitativa
 const CreateInputCuali=(arr)=>{
     let aux=0;
     for(let i=0; i<6; i++)
@@ -66,6 +68,7 @@ const CreateInputCuali=(arr)=>{
     }
     return arr;
 }
+//Procesa los valores ingresados
 const Calcular=(sector, Iarr, Oarr)=>{
     let S; let C = Datos.agricola.ValorCualitativo;let m=0;
     switch(sector){
@@ -88,6 +91,25 @@ const Calcular=(sector, Iarr, Oarr)=>{
     }
     return Oarr;
 }
+const ResultadoTotal=(arr, C)=>{
+    let cont=0;
+    if(C==0){
+        for(let i=0; i<8; i++){
+            cont += arr[i]
+        }
+    }else{
+        for(let i=8; i<14; i++){
+            cont += arr[i]
+        }
+    }
+    return cont;
+}
+const Resultados=(ValorCuanti, ValorCuali)=>{
+    let Total = 0;
+    Total = (ValorCuanti*0.85)+(ValorCuali*0.15);
+    alert(`Total de Puntaje Cuantitativo es:  ${ValorCuanti}\nTotal de Puntaje Cuantitativo es:  ${ValorCuali}\nPuntaje Crediticio Total es:  ${Total}`);
+};
+//Pinta por pantalla los resultados
 const Mostrar=(sector,arr)=>{
     document.getElementById("R1").innerHTML=arr[0];
     document.getElementById("R2").innerHTML=arr[1];
@@ -126,7 +148,6 @@ const Mostrar=(sector,arr)=>{
     document.getElementById("R21").innerHTML=arr[12];
     document.getElementById("R22").innerHTML=arr[13];
 }
-
 boton.addEventListener("click", () => {
     let sector = document.getElementById("sector").value;
     for(let i=1; i<=22;i++)
@@ -141,5 +162,8 @@ boton.addEventListener("click", () => {
     //Pintar por pantalla resultados
     console.log(ArrReturn);
     Mostrar(sector, ArrReturn);
+    //Pintar Totales
+    Resultados(ResultadoTotal(ArrReturn,0),ResultadoTotal(ArrReturn));
     ArrReturn.length=0;
 })
+
