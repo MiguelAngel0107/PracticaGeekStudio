@@ -161,9 +161,12 @@ boton.addEventListener("click", () => {
     Calcular(sector, ArrInput, ArrReturn);
     //Pintar por pantalla resultados
     console.log(ArrReturn);
+    console.log(ArrInput)
     Mostrar(sector, ArrReturn);
     //Pintar Totales
     Resultados(ResultadoTotal(ArrReturn,0),ResultadoTotal(ArrReturn));
     ArrReturn.length=0;
+    ArrInput[0].length=0;
+    ArrInput[1].length=0;
 })
 
