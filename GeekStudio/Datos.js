@@ -19,16 +19,6 @@ function rangeD( rango, limite ){
             if(result==limite){return Arreglo2;}
         }
     }
-    /*Arreglo1.forEach(function(elemento, indice, array) {
-        for(let i=0; i<10; i++)
-        {
-                let aux= i/10;
-                let result;
-                result = elemento +aux;
-                Arreglo2.push(result);
-                if(result==limite){return Arreglo2;}
-        }
-    })*/
     return Arreglo2;
 }
 
